@@ -14,12 +14,11 @@ public class Alumno extends Persona {
 
     public Alumno(String nombre, String apellidoPaterno, String apellidoMaterno, char sexo, int edad, String direccion,
             String nacionalidad, String telefono, String matricula, String correoInstitucional, String[] calificaciones,
-            double promedio, char grado) {
+            char grado) {
         super(nombre, apellidoPaterno, apellidoMaterno, sexo, edad, direccion, nacionalidad, telefono);
         this.matricula = matricula;
         this.correoInstitucional = correoInstitucional;
         this.calificaciones = calificaciones;
-        this.promedio = promedio;
         this.grado = grado;
     }
 
@@ -70,12 +69,6 @@ public class Alumno extends Persona {
      * Hacer Tareas
      * Entregar Tareas
      */
-
-    public void inscribirse() {
-    }
-
-    public void darseBaja() {
-    }
 
     public void consultarCalificaciones() {
     }
