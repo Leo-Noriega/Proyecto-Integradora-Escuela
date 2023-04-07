@@ -28,10 +28,13 @@ public class Credenciales {
             if (usuario.equals(usuariosEstu[i]) && contrasena.equals(contrasenasEstu[i])) {
                 credencialesValidas = true;
                 posUsuario = i;
+                System.out.println("Has iniciado sesión correctamente");
                 break;
+            } else {
+                System.out.println("Usuario o contraseña incorrectos");
             }
+            break;
         }
-        System.out.println("Usuario o contraseña incorrectos");
         return credencialesValidas;
     }
 
@@ -40,10 +43,13 @@ public class Credenciales {
             if (usuario.equals(usuariosDir[i]) && contrasena.equals(contrasenasDir[i])) {
                 credencialesValidas = true;
                 posUsuario = i;
+                System.out.println("Has iniciado sesión correctamente");
                 break;
+            } else {
+                System.out.println("Usuario o contraseña incorrectos");
             }
+            break;
         }
-        System.out.println("Usuario o contraseña incorrectos");
         return credencialesValidas;
     }
 }
