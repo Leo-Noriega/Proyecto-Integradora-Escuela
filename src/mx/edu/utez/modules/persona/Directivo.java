@@ -70,9 +70,9 @@ public class Directivo extends Persona {
         return alumnos;
     }
 
-    public void consultarAlumnos(String nombre) {
+    public void consultarAlumnos(String matricula) {
         for (Alumno alumno : alumnos) {
-            if (alumno.getNombre().equals(nombre)) {
+            if (alumno.getMatricula().equals(matricula)) {
                 System.out.println(alumno);
                 return;
             }
