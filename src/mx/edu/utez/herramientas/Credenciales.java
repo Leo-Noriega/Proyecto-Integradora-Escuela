@@ -18,15 +18,19 @@ public class Credenciales {
         this.usuariosDir = new String[] { "pedrorector", "xiomaradatid" };
         this.contrasenasDir = new String[] { "pedroortiza2", "xiomarabenitezb1" };
         this.credencialesValidas = false;
-        this.posUsuario = -1;
+        this.posUsuario = 0;
     }
 
     public boolean getCredencialesValidas() {
         return credencialesValidas;
     }
 
-    public String getUsuario() {
+    public String getUsuarioEstu() {
         return usuariosEstu[posUsuario];
+    }
+
+    public String getUsuarioDir() {
+        return usuariosDir[posUsuario];
     }
 
     public int getPosUsuario() {

@@ -1,20 +1,18 @@
 package mx.edu.utez.modules.persona;
 
-import mx.edu.utez.modules.escuela.Materia;
-import mx.edu.utez.modules.escuela.Salon;
-
 public class Profesor extends Persona {
+
     private String email;
-    private Materia[] materias;
+    private String[] materias;
     private double sueldo;
-    private Salon[] salones;
+    private String[] salones;
 
     public Profesor() {
     }
 
     public Profesor(String nombre, String apellidoPaterno, String apellidoMaterno, char sexo, int edad,
             String direccion,
-            String nacionalidad, String telefono, String email, Materia[] materias, double sueldo, Salon[] salones) {
+            String nacionalidad, String telefono, String email, String[] materias, double sueldo, String[] salones) {
         super(nombre, apellidoPaterno, apellidoMaterno, sexo, edad, direccion, nacionalidad, telefono);
         this.email = email;
         this.materias = materias;
@@ -30,11 +28,11 @@ public class Profesor extends Persona {
         this.email = email;
     }
 
-    public Materia[] getMaterias() {
+    public String[] getMaterias() {
         return materias;
     }
 
-    public void setMaterias(Materia[] materias) {
+    public void setMaterias(String[] materias) {
         this.materias = materias;
     }
 
@@ -46,21 +44,15 @@ public class Profesor extends Persona {
         this.sueldo = sueldo;
     }
 
-    public Salon[] getSalones() {
+    public String[] getSalones() {
         return salones;
     }
 
-    public void setSalones(Salon[] salones) {
+    public void setSalones(String[] salones) {
         this.salones = salones;
     }
 
     // @TODO: Moficiar metodos en diagrama
-    public void recibirPago() {
-    }
-
     public void registrarCalificacion() {
-    }
-
-    public void modificarCalificacion() {
     }
 }
