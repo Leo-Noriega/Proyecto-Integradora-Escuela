@@ -14,7 +14,7 @@ public class Main {
 
         do {
             // Menu de para pedir credenciales
-            System.out.print("\n* BIENVENIDO AL SISTEMA *"
+            System.out.println("\n* BIENVENIDO AL SISTEMA *"
                     + "\nPor favor, indique si es 'estudiante', 'directivo' o 'Profesor', "
                     + "\nSi desea salir del programa en cualquier momento, escriba salir: ");
             tipoUsuario = sc.nextLine().toLowerCase();
@@ -135,6 +135,7 @@ public class Main {
                             sc.nextLine();
                             switch (decision2) {
                                 case 1:
+                                    Archivo archivo = new Archivo();
                                     System.out.println("\nA continuación te pediremos unos datos necesarios para dar de alta al alumno"
                                             + "\nIntroduce el nombre del alumno deseado a dar de alta");
                                     String nombre = sc.nextLine();
@@ -162,6 +163,7 @@ public class Main {
                                     Alumno alta = new Alumno(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, matricula, correo, grado);
                                     directivo.darAltaAlumno(alta);
                                     System.out.println(alta.toString());
+                                    archivo.mensajeAlta("FichaInscripcion-" + (alta.getMatricula()), alumno5);
                                     break;
                                 case 2:
                                     break;
