@@ -68,8 +68,15 @@ public class Directivo extends Persona {
      * -- Cambiar diagrama de clases con estos nuevos metodos --
      * Crud de alumnos y profesores
      */
-    public List<Alumno> imprimirAlumnos() {
-        return alumnos;
+    public void añadirAlumnosL(Alumno alumno) {
+        alumnos.add(alumno);
+    }
+    public String imprimirAlumnos() {
+        String output = "";
+        for ( Alumno alumno : alumnos) {
+            output += alumno.toString() + "\n";
+        }
+        return output;
     }
 
     public void consultarAlumnos(String matricula) {
@@ -195,4 +202,5 @@ public class Directivo extends Persona {
         }
         System.out.println("No se encontró al personal con el nombre proporcionado.");
     }
+    
 }

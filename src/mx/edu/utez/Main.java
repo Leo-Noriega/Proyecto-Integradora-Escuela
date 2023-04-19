@@ -96,6 +96,25 @@ public class Main {
                             + directivo.getApellidoPaterno() + " "
                             + directivo.getApellidoMaterno() + "");
 
+                    // Creando alumnos predeterminados para sus métodos (5)
+                    Alumno alumno1 = new Alumno("Juan", "Pérez", "García", 'M', 18, "Calle 123", "Mexicana",
+                            "1234567890", "2023tn01", "juanperez@utez.edu.mx", new String[]{"9", "10", "8"}, 'A');
+                    Alumno alumno2 = new Alumno("María", "Gómez", "Hernández", 'F', 20, "Calle 456", "Mexicana",
+                            "0987654321", "2023tn02", "mariagomez@utez.edu.mx", new String[]{"8", "7", "9"}, 'B');
+                    Alumno alumno3 = new Alumno("Carlos", "Sánchez", "López", 'M', 22, "Calle 789", "Mexicana",
+                            "1357902468", "2023tn03", "carlossanchez@utez.edu.mx", new String[]{"10", "10", "10"}, 'C');
+                    Alumno alumno4 = new Alumno("Ana", "Martínez", "Flores", 'F', 19, "Calle 321", "Mexicana",
+                            "2468013579", "2023tn04", "anamartinez@utez.edu.mx", new String[]{"7", "8", "6"}, 'A');
+                    Alumno alumno5 = new Alumno("Luis", "Hernández", "Castillo", 'M', 21, "Calle 654", "Mexicana",
+                            "3692581470", "2023tn05", "luishernandez@utez.edu.mx", new String[]{"9", "7", "8"}, 'B');
+
+                    //Añadiendo alumnos a ArrayList de directivo
+                    directivo.añadirAlumnosL(alumno1);
+                    directivo.añadirAlumnosL(alumno2);
+                    directivo.añadirAlumnosL(alumno3);
+                    directivo.añadirAlumnosL(alumno4);
+                    directivo.añadirAlumnosL(alumno5);
+
                     System.out.println("Indica el número según la opción que deseas realizar"
                             + "\n1.- Dar altas"
                             + "\n2.- Consultar"
@@ -156,7 +175,7 @@ public class Main {
 
                             break;
                         case 2:
-                            System.out.println("¿Qué persona deseas Consultar?"
+                            System.out.println("¿Qué personas deseas Consultar?"
                                     + "\n1.- Alumno"
                                     + "\n2.- Profesor"
                                     + "\n3.- Personal"
@@ -164,7 +183,7 @@ public class Main {
                             int decision3 = sc.nextInt();
                             switch (decision3) {
                                 case 1:
-
+                                    System.out.println(directivo.imprimirAlumnos());
                                     break;
                                 case 2:
                                     break;

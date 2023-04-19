@@ -77,7 +77,7 @@ public class Alumno extends Persona {
     public String toString() {
         return "Alumno: " + nombre + " " + apellidoPaterno + " " +apellidoMaterno +
                 "\nMatricula: " + matricula + 
-                "\nCorreo Institucional: " + correoInstitucional + "| Grado: " + grado + '}';
+                "\nCorreo Institucional: " + correoInstitucional + "| Grado: " + grado + "\n";
     }
     
 }
