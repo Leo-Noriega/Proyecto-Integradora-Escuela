@@ -205,7 +205,34 @@ public class Main {
                             int decision4 = sc.nextInt();
                             switch (decision4) {
                                 case 1:
-
+                                    System.out.println("Introduce la matricula del alumno que desea modificar: ");
+                                    String mat = sc.nextLine();
+                                    System.out.println("\nA continuación te pediremos que ingreses los nuevos datos alumno o confirmarlos si es que no necesitan ser actualizados"
+                                            + "\nIntroduce el nuevo nombre del alumno");
+                                    String nombre = sc.nextLine();
+                                    System.out.println("Introduce el apellido paterno del alumno");
+                                    String apPa = sc.nextLine();
+                                    System.out.println("Introduce el apellido materno del alumno");
+                                    String apMa = sc.nextLine();
+                                    System.out.println("Introduce el género del alumno");
+                                    char sexo = sc.next().charAt(0);
+                                    System.out.println("Introduce la edad del alumno");
+                                    int edad = sc.nextInt();
+                                    sc.nextLine();
+                                    System.out.println("Introduce la dirección del alumno");
+                                    String dir = sc.nextLine();
+                                    System.out.println("Introduce la nacionalidad del alumno");
+                                    String nacionalidad = sc.nextLine();
+                                    System.out.println("Introduce el telefono del alumno");
+                                    String telefono = sc.nextLine();
+                                    System.out.println("Introduce la mátricula del alumno");
+                                    String matricula = sc.nextLine();
+                                    System.out.println("Introduce el correo institucional del alumno");
+                                    String correo = sc.nextLine();
+                                    System.out.println("Introduce el grado del alumno");
+                                    char grado = sc.next().charAt(0);
+                                    Alumno actualizado = new Alumno(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, matricula, correo, grado);
+                                    directivo.actualizarAlumno(mat, actualizado);
                                     break;
                                 case 2:
                                     break;

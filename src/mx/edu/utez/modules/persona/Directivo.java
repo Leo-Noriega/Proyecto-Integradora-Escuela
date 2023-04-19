@@ -94,10 +94,10 @@ public class Directivo extends Persona {
         System.out.println("Se ha dado de alta al alumno exitosamente.");
     }
 
-    public void actualizarAlumno(String nombre, Alumno alumno) {
+    public void actualizarAlumno(String matricula, Alumno alumno) {
         for (int i = 0; i < alumnos.size(); i++) {
             Alumno alm = alumnos.get(i);
-            if (alm.getNombre().equals(nombre)) {
+            if (alm.getMatricula().equals(matricula)) {
                 alumnos.set(i, alumno);
                 System.out.println("Se ha actualizado al alumno exitosamente.");
                 return;
