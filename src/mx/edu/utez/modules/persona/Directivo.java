@@ -71,11 +71,11 @@ public class Directivo extends Persona {
     public void añadirAlumnosL(Alumno alumno) {
         alumnos.add(alumno);
     }
-    
+
     public void añadirProfesores(Profesor profesor) {
         profesores.add(profesor);
     }
-    
+
     public void añadirPersonalL(Personal personal) {
         personalE.add(personal);
     }
@@ -95,7 +95,7 @@ public class Directivo extends Persona {
         }
         return output;
     }
-    
+
     public String imprimirPersonal() {
         String output = "";
         for (Personal personal : personalE) {
@@ -131,9 +131,9 @@ public class Directivo extends Persona {
         System.out.println("No se encontró al alumno con la matricula proporcionada.");
     }
 
-    public void darBajaAlumno(String matricula) {
+    public void darBajaAlumno(String matricula, Alumno alumno) {
         for (int i = 0; i < alumnos.size(); i++) {
-            Alumno alumno = alumnos.get(i);
+            alumno = alumnos.get(i);
             if (alumno.getMatricula().equals(matricula)) {
                 alumnos.remove(i);
                 System.out.println("Se ha dado de baja al alumno exitosamente.");
@@ -169,9 +169,9 @@ public class Directivo extends Persona {
         System.out.println("No se encontró al profesor con el nombre proporcionado.");
     }
 
-    public void darBajaProfesor(String nombre) {
+    public void darBajaProfesor(String nombre, Profesor profesor) {
         for (int i = 0; i < profesores.size(); i++) {
-            Profesor profesor = profesores.get(i);
+            profesor = profesores.get(i);
             if (profesor.getNombre().equals(nombre)) {
                 profesores.remove(i);
                 System.out.println("Se ha dado de baja al profesor exitosamente.");

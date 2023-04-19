@@ -1,6 +1,7 @@
 package mx.edu.utez.modules.persona;
 
 public class Personal extends Persona {
+
     // @TODO: Eliminar "antiguedad" modificar puesto y sueldo
     private String puesto;
     private String horario;
@@ -43,5 +44,14 @@ public class Personal extends Persona {
     }
 
     public void recibirPago() {
+    }
+
+    public String toString() {
+        return "========================================================================================="
+                + "\nAlumno: " + nombre + " " + apellidoPaterno + " " + apellidoMaterno
+                + "\nEdad: " + edad + " Sexo: " + sexo + " Dirección: " + direccion
+                + "\nTelefono: " + telefono + " Nacionalidad: " + nacionalidad
+                + "\nPuesto " + puesto + "  Horario" + horario + "  Sueldo=" + sueldo
+                + "\n=========================================================================================";
     }
 }

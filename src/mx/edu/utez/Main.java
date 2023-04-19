@@ -127,7 +127,7 @@ public class Main {
                     directivo.añadirProfesores(profesor3);
                     directivo.añadirProfesores(profesor4);
                     directivo.añadirProfesores(profesor5);
-                    
+
                     //Personal 
                     Personal personal1 = new Personal("Ernestina", "Morales", "Madrid", 'F', 45, "Av. Roma #5",
                             "Hondureña", "9832379487", "Limpieza", "8:00 am - 3:00 pm", 2500);
@@ -354,12 +354,16 @@ public class Main {
                                         case 1:
                                             System.out.println("Introduce la matricula del alumno que deseas dar de baja: ");
                                             String matricula = sc.nextLine();
-                                            directivo.darBajaAlumno(matricula);
+                                            Alumno alumno = new Alumno();
+                                            directivo.darBajaAlumno(matricula, alumno);
+                                            archivo.mensajeBajaEstu("SolicitudBaja-" + matricula, alumno);
                                             break;
                                         case 2:
                                             System.out.println("Introduce el nombre del profesor que deseas dar de baja");
                                             String nombre = sc.nextLine();
-                                            directivo.darBajaProfesor(nombre);
+                                            Profesor profesor = new Profesor();
+                                            directivo.darBajaProfesor(nombre, profesor);
+                                            archivo.mensajeBajaProf("SolicitudDespido-" + nombre, profesor);
                                             break;
                                         case 3:
                                             System.out.println("Introduce el nombre del personal que deseas dar de baja");

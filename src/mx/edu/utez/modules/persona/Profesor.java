@@ -97,4 +97,12 @@ public class Profesor extends Persona {
         return output;
     }
 
+    public String toString() {
+        return "========================================================================================="
+                + "\nAlumno: " + nombre + " " + apellidoPaterno + " " + apellidoMaterno
+                + "\nEdad: " + edad + " Sexo: " + sexo + " Dirección: " + direccion
+                + "\nTelefono: " + telefono + " Nacionalidad: " + nacionalidad
+                + "\nMateria a Impartir: " + materia + "  Correo Institucional:" + email + "  Sueldo=" + sueldo
+                + "\n=========================================================================================";
+    }
 }
