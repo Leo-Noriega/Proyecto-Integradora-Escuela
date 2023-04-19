@@ -119,9 +119,9 @@ public class Alumno extends Persona {
         //return calificaciones;
     }
 
-    public void darseBaja(String matricula, List<Alumno> alumnos, Alumno alumno) {
+    public void darseBaja(String matricula, List<Alumno> alumnos) {
         for (int i = 0; i < alumnos.size(); i++) {
-            alumno = alumnos.get(i);
+            Alumno alumno = alumnos.get(i);
             if (alumno.getMatricula().equals(matricula)) {
                 alumnos.remove(i);
                 System.out.println(alumno.getNombre() + " " + alumno.getApellidoPaterno()

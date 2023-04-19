@@ -76,8 +76,7 @@ public class Main {
                             System.out.println("Porfavor, introduce tu matricula:");
                             matricula = sc.nextLine();
                             Alumno alumno = new Alumno();
-                            alumnos1.darseBaja(matricula, alumnos, alumno);
-                            archivo.mensajeBajaEstu("SolicitudBaja-" + matricula, alumno);
+                            alumnos1.darseBaja(matricula, alumnos);
                             break;
                         case 3:
                             System.out.println("Has salido");
@@ -235,7 +234,6 @@ public class Main {
                                             System.out.println("Has salido");
                                             break;
                                         default:
-                                            throw new AssertionError();
                                     }
 
                                 } while (decision2 != 4);
@@ -263,7 +261,6 @@ public class Main {
                                             System.out.println("Has salido");
                                             break;
                                         default:
-                                            throw new AssertionError();
                                     }
 
                                 } while (decision3 != 4);
@@ -339,7 +336,6 @@ public class Main {
                                             System.out.println("Has salido");
                                             break;
                                         default:
-                                            throw new AssertionError();
                                     }
                                 } while (decision4 != 4);
 
@@ -357,15 +353,13 @@ public class Main {
                                             System.out.println("Introduce la matricula del alumno que deseas dar de baja: ");
                                             String matricula = sc.nextLine();
                                             Alumno alumno = new Alumno();
-                                            directivo.darBajaAlumno(matricula, alumno);
-                                            archivo.mensajeBajaEstu("SolicitudBaja-" + matricula, alumno);
+                                            directivo.darBajaAlumno(matricula);
                                             break;
                                         case 2:
                                             System.out.println("Introduce el nombre del profesor que deseas dar de baja");
                                             String nombre = sc.nextLine();
                                             Profesor profesor = new Profesor();
-                                            directivo.darBajaProfesor(nombre, profesor);
-                                            archivo.mensajeBajaProf("SolicitudDespido-" + nombre, profesor);
+                                            directivo.darBajaProfesor(nombre);
                                             break;
                                         case 3:
                                             System.out.println("Introduce el nombre del personal que deseas dar de baja");
@@ -376,7 +370,6 @@ public class Main {
                                             System.out.println("Has salido");
                                             break;
                                         default:
-                                            throw new AssertionError();
                                     }
                                 } while (decision5 != 4);
 
@@ -432,7 +425,6 @@ public class Main {
                                 System.out.println("Has salido");
                                 break;
                             default:
-                                throw new AssertionError();
                         }
                     } while (decision6 != 3);
                 }
