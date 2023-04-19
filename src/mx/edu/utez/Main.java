@@ -88,7 +88,6 @@ public class Main {
             }
             if (tipoUsuario.equals("directivo")) {
                 credencial.validarCreedencialesDir();
-
                 if (credencial.getUsuarioDir().equals("pedrorector")) {
                     // Creando directivo para sus métodos
                     Directivo directivo = new Directivo("Pedro", "Ortiz", "Gonzalez", 'H', 45, "Calle Revolución #2",
@@ -97,7 +96,7 @@ public class Main {
                             + directivo.getApellidoPaterno() + " "
                             + directivo.getApellidoMaterno() + "");
 
-                    System.out.println("¿Qupe acción deseas realizar?"
+                    System.out.println("Indica el número según la opción que deseas realizar"
                             + "\n1.- Dar altas"
                             + "\n2.- Consultar"
                             + "\n3.- Actualizar Información "
@@ -116,7 +115,33 @@ public class Main {
                             int decision2 = sc.nextInt();
                             switch (decision2) {
                                 case 1:
-
+                                    System.out.println("\nA continuación te pediremos unos datos necesarios para dar de alta al alumno"
+                                            + "\nIntroduce el nombre del alumno deseado a dar de alta");
+                                    String nombre = sc.nextLine();
+                                    System.out.println("\nIntroduce el apellido paterno del alumno deseado a dar de alta");
+                                    String apPa = sc.nextLine();
+                                    System.out.println("\nIntroduce el apellido materno del alumno deseado a dar de alta");
+                                    String apMa = sc.nextLine();
+                                    System.out.println("\nIntroduce el género del alumno deseado a dar de alta");
+                                    char sexo = sc.next().charAt(0);
+                                    System.out.println("\nIntroduce la edad del alumno deseado a dar de alta");
+                                    int edad = sc.nextInt();
+                                    System.out.println("\nIntroduce la dirección del alumno deseado a dar de alta");
+                                    String dir = sc.nextLine();
+                                    System.out.println("\nIntroduce la nacionalidad del alumno deseado a dar de alta");
+                                    String nacionalidad = sc.nextLine();
+                                    System.out.println("\nIntroduce el telefono del alumno deseado a dar de alta");
+                                    String telefono = sc.nextLine();
+                                    System.out.println("\nIntroduce la mátricula del alumno deseado a dar de alta: ");
+                                    String matricula = sc.nextLine();
+                                    System.out.println("\nIntroduce el correo institucional del alumno deseado a dar de alta");
+                                    String correo = sc.nextLine();
+                                    System.out.println("\nIntroduce el grado del alumno deseado a dar de alta");
+                                    char grado = sc.next().charAt(0);
+                                    Alumno alta = new Alumno(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, matricula, correo, grado);
+                                    directivo.darAltaAlumno(alta);
+                                    System.out.println("Se a dado de alta correctamente al alumno");
+                                    System.out.println(alta.toString());
                                     break;
                                 case 2:
                                     break;

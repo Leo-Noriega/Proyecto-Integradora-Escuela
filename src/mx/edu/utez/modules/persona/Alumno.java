@@ -6,7 +6,6 @@ public class Alumno extends Persona {
     private String correoInstitucional;
     // @TODO: Modificar en el diagrama de classses Calificaciones[] por un String[]
     private String[] calificaciones;
-    private double promedio;
     // @TODO: Modificar en el diagrama de clases String a char y borrar "Horario"
     private char grado;
 
@@ -20,6 +19,14 @@ public class Alumno extends Persona {
         this.matricula = matricula;
         this.correoInstitucional = correoInstitucional;
         this.calificaciones = calificaciones;
+        this.grado = grado;
+    }
+
+    public Alumno(String nombre, String apellidoPaterno, String apellidoMaterno, char sexo, int edad, String direccion,
+            String nacionalidad, String telefono, String matricula, String correoInstitucional, char grado) {
+        super(nombre, apellidoPaterno, apellidoMaterno, sexo, edad, direccion, nacionalidad, telefono);
+        this.matricula = matricula;
+        this.correoInstitucional = correoInstitucional;
         this.grado = grado;
     }
 
@@ -42,17 +49,9 @@ public class Alumno extends Persona {
     public void setCalificaciones(String[] calificaciones) {
         this.calificaciones = calificaciones;
     }
-    
-    public String [] getCalificaciones() {
+
+    public String[] getCalificaciones() {
         return calificaciones;
-    }
-
-    public double getPromedio() {
-        return promedio;
-    }
-
-    public void setPromedio(double promedio) {
-        this.promedio = promedio;
     }
 
     public char getGrado() {
@@ -73,4 +72,10 @@ public class Alumno extends Persona {
     public String[] consultarCalificaciones() {
         return calificaciones;
     }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "matricula=" + matricula + ", correoInstitucional=" + correoInstitucional + ", calificaciones=" + calificaciones + ", grado=" + grado + '}';
+    }
+    
 }

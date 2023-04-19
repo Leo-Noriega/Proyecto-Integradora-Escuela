@@ -152,4 +152,47 @@ public class Directivo extends Persona {
         }
         System.out.println("No se encontró al profesor con el nombre proporcionado.");
     }
+    //PERSONAL
+    public List<Personal> imprimirPersonal() {
+        return personalE;
+    }
+
+    public void consultarPersonal(String nombre) {
+        for (Personal personal : personalE) {
+            if (personal.getNombre().equals(nombre)) {
+                System.out.println(personal);
+                return;
+            }
+        }
+        System.out.println("No se encontró el personal con el nombre proporcionado.");
+    }
+
+    public void darAltaPersonal(Personal personal) {
+        personalE.add(personal);
+        System.out.println("Se ha dado de alta al personal exitosamente.");
+    }
+
+    public void actualizarPersonal(String nombre, Personal personal) {
+        for (int i = 0; i < personalE.size(); i++) {
+            Personal per = personalE.get(i);
+            if (per.getNombre().equals(nombre)) {
+                personalE.set(i, personal);
+                System.out.println("Se ha actualizado al personal exitosamente.");
+                return;
+            }
+        }
+        System.out.println("No se encontró al profesor con el nombre proporcionado.");
+    }
+
+    public void darBajaPersonal(String nombre) {
+        for (int i = 0; i < personalE.size(); i++) {
+            Personal personal = personalE.get(i);
+            if (personal.getNombre().equals(nombre)) {
+                personalE.remove(i);
+                System.out.println("Se ha dado de baja al personal exitosamente.");
+                return;
+            }
+        }
+        System.out.println("No se encontró al personal con el nombre proporcionado.");
+    }
 }
