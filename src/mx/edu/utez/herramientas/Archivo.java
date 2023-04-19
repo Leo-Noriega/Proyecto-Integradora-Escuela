@@ -35,4 +35,35 @@ public class Archivo {
             e.printStackTrace();
         }
     }
+
+    public static void mensajeBaja(String nombreArchivo, Alumno alumno) {
+        try {
+            FileReader lector = new FileReader(nombreArchivo + ".txt");
+            BufferedReader buffer = new BufferedReader(lector);
+            StringBuilder contenido = new StringBuilder();
+            String linea;
+            boolean encontrar = false;
+            while ((linea = buffer.readLine()) != null) {
+                if (linea.contains(alumno.getMatricula())) {
+                    encontrar = true;
+                } else {
+                    contenido.append(linea).append("\n");
+                }
+            }
+            buffer.close();
+            lector.close();
+            if (encontrar) {
+                FileWriter escritor = new FileWriter(nombreArchivo + ".txt");
+                escritor.write(contenido.toString());
+                escritor.close();
+                System.out.println("Se ha dado de baja al usuario con Matricula " + alumno.getMatricula());
+            } else {
+                System.out.println("No se encontró al usuario con número de control " + alumno.getMatricula());
+            }
+        } catch (IOException e) {
+            System.out.println("Ocurrio un error al dar de baja al usuario");
+            e.printStackTrace();
+        }
+    }
+
 }

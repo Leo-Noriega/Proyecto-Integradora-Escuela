@@ -115,6 +115,19 @@ public class Main {
                     directivo.añadirAlumnosL(alumno4);
                     directivo.añadirAlumnosL(alumno5);
 
+                    //Profesores
+                    Profesor profesor1 = new Profesor("Griselda", "Leiva", "González", 'F', 35, "Calle 1 #123", "Mexicana", "1234567890", "griselda.leiva@utez.edu.mx", "Programación", 15000.0);
+                    Profesor profesor2 = new Profesor("Adriel", "Campos", "Rojas", 'M', 28, "Calle 2 #456", "Mexicana", "2345678901", "adriel.campos@utez.edu.mx", "Matemáticas", 12000.0);
+                    Profesor profesor3 = new Profesor("Eunice", "Santos", "Pérez", 'F', 42, "Calle 3 #789", "Mexicana", "3456789012", "eunice.santos@utez.edu.mx", "Español", 13000.0);
+                    Profesor profesor4 = new Profesor("Winston", "Clarke", "Williams", 'M', 50, "Calle 4 #101", "Jamaicana", "4567890123", "winston.clarke@utez.edu.mx", "Inglés", 18000.0);
+                    Profesor profesor5 = new Profesor("Silvia", "López", "Ramírez", 'F', 39, "Calle 5 #234", "Mexicana", "5678901234", "silvia.lopez@utez.edu.mx", "Química", 16000.0);
+                    Profesor profesor6 = new Profesor("Felipe", "Sánchez", "Martínez", 'M', 45, "Calle 6 #567", "Mexicana", "6789012345", "felipe.sanchez@utez.edu.mx", "Física", 17000.0);
+                    directivo.añadirProfesores(profesor1);
+                    directivo.añadirProfesores(profesor2);
+                    directivo.añadirProfesores(profesor3);
+                    directivo.añadirProfesores(profesor4);
+                    directivo.añadirProfesores(profesor5);
+                    
                     //Personal 
                     Personal personal1 = new Personal("Ernestina", "Morales", "Madrid", 'F', 45, "Av. Roma #5",
                             "Hondureña", "9832379487", "Limpieza", "8:00 am - 3:00 pm", 2500);
