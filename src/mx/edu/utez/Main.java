@@ -75,7 +75,9 @@ public class Main {
                         case 2:
                             System.out.println("Porfavor, introduce tu matricula:");
                             matricula = sc.nextLine();
-                            alumnos1.darseBaja(matricula, alumnos);
+                            Alumno alumno = new Alumno();
+                            alumnos1.darseBaja(matricula, alumnos, alumno);
+                            archivo.mensajeBajaEstu("SolicitudBaja-" + matricula, alumno);
                             break;
                         case 3:
                             System.out.println("Has salido");
