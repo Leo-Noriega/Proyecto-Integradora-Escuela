@@ -1,5 +1,7 @@
 package mx.edu.utez.modules.persona;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Profesor extends Persona {
@@ -80,4 +82,19 @@ public class Profesor extends Persona {
             System.out.println();
         }
     }
+
+    private List<Alumno> alumnos = new ArrayList<>();
+
+    public void añadirAlumnosL(Alumno alumno) {
+        alumnos.add(alumno);
+    }
+
+    public String imprimirAlumnos() {
+        String output = "";
+        for (Alumno alumno : alumnos) {
+            output += alumno.toString() + "\n";
+        }
+        return output;
+    }
+
 }

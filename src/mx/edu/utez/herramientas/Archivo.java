@@ -20,7 +20,7 @@ public class Archivo {
             e.printStackTrace();
         }
     }
-    
+
     public static void mensajeAltaProf(String nombreArchivo, Profesor profesor) {
         try {
             FileWriter escritor = new FileWriter(nombreArchivo + ".txt");

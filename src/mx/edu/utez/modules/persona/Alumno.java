@@ -74,7 +74,10 @@ public class Alumno extends Persona {
      */
     @Override
     public String toString() {
-        return "Alumno{" + "matricula=" + matricula + ", correoInstitucional=" + correoInstitucional + ", calificaciones=" + calificaciones + ", grado=" + grado + '}';
+        return "\nAlumno: " + nombre + " " + apellidoPaterno + " " + apellidoMaterno
+                + "\nEdad: " + edad + "\t| Dirección: " + direccion + "\t| Telefono: " + telefono
+                + "\nMatricula: " + matricula + "\t| Correo Institucional=" + correoInstitucional 
+                + "\nGrado: " + grado;
     }
 
     public void consultarCalificaciones() {
