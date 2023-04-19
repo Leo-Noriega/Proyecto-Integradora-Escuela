@@ -35,34 +35,4 @@ public class Archivo {
             e.printStackTrace();
         }
     }
-
-    public static void mensajeBajaEstu(String nombreArchivo, Alumno alumno) {
-        try {
-            FileWriter escritor = new FileWriter(nombreArchivo + ".txt");
-            escritor.write("Universidad Técnologica Emiliano Zapata"
-                    + "\nSOLICITUD DE BAJA DE ESTUDIANTE"
-                    + "\nInformación del estudiante:"
-                    + "\n" + alumno);
-            escritor.close();
-            System.out.println("Se ha generado tu solicitud de baja correctamente, el nombre del archivo es:  " + nombreArchivo);
-        } catch (IOException e) {
-            System.out.println("Ocurrio un error al generar la ficha de inscripción");
-            e.printStackTrace();
-        }
-    }
-
-    public static void mensajeBajaProf(String nombreArchivo, Profesor profesor) {
-        try {
-            FileWriter escritor = new FileWriter(nombreArchivo + ".txt");
-            escritor.write("Universidad Técnologica Emiliano Zapata"
-                    + "\nSOLICITUD DE DESPIDO DE PROFESOR"
-                    + "\nInformación del profesor:"
-                    + "\n" + profesor);
-            escritor.close();
-            System.out.println("Se ha generado tu solicitud de despido correctamente, el nombre del archivo es:  " + nombreArchivo);
-        } catch (IOException e) {
-            System.out.println("Ocurrio un error al generar la ficha de inscripción");
-            e.printStackTrace();
-        }
-    }
 }
