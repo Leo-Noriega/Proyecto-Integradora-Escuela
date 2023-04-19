@@ -71,6 +71,7 @@ public class Directivo extends Persona {
     public void añadirAlumnosL(Alumno alumno) {
         alumnos.add(alumno);
     }
+    
     public String imprimirAlumnos() {
         String output = "";
         for ( Alumno alumno : alumnos) {
