@@ -10,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Archivo archivo = new Archivo();
         String tipoUsuario;
         int decisionA, decision, decision2, decision3, decision4, decision5, decision6;
 
@@ -144,7 +145,6 @@ public class Main {
                                     sc.nextLine();
                                     switch (decision2) {
                                         case 1:
-                                            Archivo archivo = new Archivo();
                                             System.out.println("\nA continuación te pediremos unos datos necesarios para dar de alta al alumno"
                                                     + "\nIntroduce el nombre del alumno deseado a dar de alta");
                                             String nombre = sc.nextLine();
@@ -169,12 +169,40 @@ public class Main {
                                             String correo = sc.nextLine();
                                             System.out.println("Introduce el grado del alumno deseado a dar de alta");
                                             char grado = sc.next().charAt(0);
-                                            Alumno alta = new Alumno(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, matricula, correo, grado);
-                                            directivo.darAltaAlumno(alta);
-                                            System.out.println(alta.toString());
-                                            archivo.mensajeAlta("FichaInscripcion-" + (alta.getMatricula()), alta);
+                                            Alumno altaEstu = new Alumno(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, matricula, correo, grado);
+                                            directivo.darAltaAlumno(altaEstu);
+                                            System.out.println(altaEstu.toString());
+                                            archivo.mensajeAltaEstu("FichaEstudiante-" + (altaEstu.getMatricula()), altaEstu);
                                             break;
                                         case 2:
+                                            System.out.println("\nA continuación te pediremos unos datos necesarios para dar de alta al profesor"
+                                                    + "\nIntroduce el nombre del profesor deseado a dar de alta");
+                                            nombre = sc.nextLine();
+                                            System.out.println("Introduce el apellido paterno del profesor deseado a dar de alta");
+                                            apPa = sc.nextLine();
+                                            System.out.println("Introduce el apellido materno del profesor deseado a dar de alta");
+                                            apMa = sc.nextLine();
+                                            System.out.println("Introduce el género del profesor deseado a dar de alta");
+                                            sexo = sc.next().charAt(0);
+                                            System.out.println("Introduce la edad del profesor deseado a dar de alta");
+                                            edad = sc.nextInt();
+                                            sc.nextLine();
+                                            System.out.println("Introduce la dirección del profesor deseado a dar de alta");
+                                            dir = sc.nextLine();
+                                            System.out.println("Introduce la nacionalidad del profesor deseado a dar de alta");
+                                            nacionalidad = sc.nextLine();
+                                            System.out.println("Introduce el telefono del profesor deseado a dar de alta");
+                                            telefono = sc.nextLine();
+                                            System.out.println("Introduce el correo institucional del profesor deseado a dar de alta");
+                                            correo = sc.nextLine();
+                                            System.out.println("Introduce la materia asignada al profesor");
+                                            String materia = sc.nextLine();
+                                            System.out.println("Introduce el sueldo del profesor deseado a dar de alta");
+                                            double sueldo = sc.nextDouble();
+                                            Profesor altaProf = new Profesor(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, correo, materia, sueldo);
+                                            directivo.darAltaProfesor(altaProf);
+                                            System.out.println(altaProf.toString());
+                                            archivo.mensajeAltaProf("FichaProfesor-" + (altaProf.getNombre()), altaProf);
                                             break;
                                         case 3:
                                             break;
