@@ -1,6 +1,7 @@
 package mx.edu.utez.modules.persona;
 
 public class Alumno extends Persona {
+
     private String matricula;
     private String correoInstitucional;
     // @TODO: Modificar en el diagrama de classses Calificaciones[] por un String[]
@@ -38,10 +39,6 @@ public class Alumno extends Persona {
         this.correoInstitucional = correoInstitucional;
     }
 
-    public String[] getCalificaciones() {
-        return calificaciones;
-    }
-
     public void setCalificaciones(String[] calificaciones) {
         this.calificaciones = calificaciones;
     }
@@ -69,7 +66,7 @@ public class Alumno extends Persona {
      * Hacer Tareas
      * Entregar Tareas
      */
-
-    public void consultarCalificaciones() {
+    public String[] consultarCalificaciones() {
+        return calificaciones;
     }
 }

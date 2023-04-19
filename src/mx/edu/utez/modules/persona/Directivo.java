@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Directivo extends Persona {
+
     private String email;
     private String ubicacion;
     // @TODO: En el diagrama de clases cambiar atributo "tipo" por "puesto"
@@ -11,6 +12,7 @@ public class Directivo extends Persona {
     private double sueldo;
     private List<Alumno> alumnos = new ArrayList<>();
     private List<Profesor> profesores = new ArrayList<>();
+    private List<Personal> personalE = new ArrayList<>();
 
     public Directivo() {
     }
@@ -149,9 +151,5 @@ public class Directivo extends Persona {
             }
         }
         System.out.println("No se encontró al profesor con el nombre proporcionado.");
-    }
-
-    // @TODO: Rellenar método de la clase con lo que debe hacer
-    public void administrar() {
     }
 }
