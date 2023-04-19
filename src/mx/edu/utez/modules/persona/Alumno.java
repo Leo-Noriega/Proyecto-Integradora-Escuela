@@ -1,5 +1,6 @@
 package mx.edu.utez.modules.persona;
 
+import java.util.List;
 import java.util.Random;
 
 public class Alumno extends Persona {
@@ -111,5 +112,17 @@ public class Alumno extends Persona {
             System.out.println();
         }
         //return calificaciones;
+    }
+
+    public void darseBaja(String matricula, List<Alumno> alumnos) {
+        for (int i = 0; i < alumnos.size(); i++) {
+            Alumno alumno = alumnos.get(i);
+            if (alumno.getMatricula().equals(matricula)) {
+                alumnos.remove(i);
+                System.out.println(alumno.getNombre() + " " + alumno.getApellidoPaterno()
+                        + "has mandado tu solicitud exitosamente.");
+                return;
+            }
+        }
     }
 }

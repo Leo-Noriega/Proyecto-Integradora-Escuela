@@ -64,26 +64,18 @@ public class Main {
                             + "\n3.- Salir");
                     decisionA = sc.nextInt();
                     sc.nextLine();
+                    Alumno alumnos1 = new Alumno();
                     switch (decisionA) {
                         case 1:
                             //Pidiendo mátricula al usuario para saber su identidad
                             System.out.println("Porfavor, introduce tu matricula:");
                             String matricula = sc.nextLine();
-                            Alumno alumnos1 = new Alumno();
                             alumnos1.consultarCalificaciones();
                             break;
                         case 2:
                             System.out.println("Porfavor, introduce tu matricula:");
                             matricula = sc.nextLine();
-                            for (int i = 0; i < alumnos.size(); i++) {
-                                Alumno alumno = alumnos.get(i);
-                                if (alumno.getMatricula().equals(matricula)) {
-                                    alumnos.remove(i);
-                                    System.out.println(alumno.getNombre() + " " + alumno.getApellidoPaterno()
-                                            + "has mandado tu solicitud exitosamente.");
-                                    return;
-                                }
-                            }
+                            alumnos1.darseBaja(matricula, alumnos);
                             break;
                         case 3:
                             System.out.println("Has salido");
