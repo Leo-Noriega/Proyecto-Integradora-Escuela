@@ -139,8 +139,7 @@ public class Main {
                                     System.out.println("¿Qué persona deseas dar de alta?"
                                             + "\n1.- Alumno"
                                             + "\n2.- Profesor"
-                                            + "\n3.- Personal"
-                                            + "\n4.- Salir");
+                                            + "\n3.- Salir");
                                     decision2 = sc.nextInt();
                                     sc.nextLine();
                                     switch (decision2) {
@@ -205,8 +204,6 @@ public class Main {
                                             archivo.mensajeAltaProf("FichaProfesor-" + (altaProf.getNombre()), altaProf);
                                             break;
                                         case 3:
-                                            break;
-                                        case 4:
                                             System.out.println("Has salido");
                                             break;
                                         default:
@@ -229,8 +226,10 @@ public class Main {
                                             System.out.println(directivo.imprimirAlumnos());
                                             break;
                                         case 2:
+                                            System.out.println(directivo.imprimirProfesores());
                                             break;
                                         case 3:
+                                            System.out.println(directivo.imprimirPersonal());
                                             break;
                                         case 4:
                                             System.out.println("Has salido");
@@ -240,22 +239,20 @@ public class Main {
                                     }
 
                                 } while (decision3 != 4);
-
                                 break;
                             case 3:
                                 do {
                                     System.out.println("¿Qué persona deseas Actualizar?"
                                             + "\n1.- Alumno"
                                             + "\n2.- Profesor"
-                                            + "\n3.- Personal"
-                                            + "\n4.- Salir");
+                                            + "\n3.- Salir");
                                     decision4 = sc.nextInt();
                                     switch (decision4) {
                                         case 1:
                                             System.out.println("Introduce la matricula del alumno que desea modificar: ");
                                             String mat = sc.nextLine();
                                             System.out.println("\nA continuación te pediremos que ingreses los nuevos datos alumno o confirmarlos si es que no necesitan ser actualizados"
-                                                    + "\nIntroduce el nuevo nombre del alumno");
+                                                    + "\nIntroduce el nombre del alumno");
                                             String nombre = sc.nextLine();
                                             System.out.println("Introduce el apellido paterno del alumno");
                                             String apPa = sc.nextLine();
@@ -278,14 +275,39 @@ public class Main {
                                             String correo = sc.nextLine();
                                             System.out.println("Introduce el grado del alumno");
                                             char grado = sc.next().charAt(0);
-                                            Alumno actualizado = new Alumno(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, matricula, correo, grado);
-                                            directivo.actualizarAlumno(mat, actualizado);
+                                            Alumno actualizadoEstu = new Alumno(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, matricula, correo, grado);
+                                            directivo.actualizarAlumno(mat, actualizadoEstu);
                                             break;
                                         case 2:
+                                            System.out.println("\nA continuación te pediremos los nuevos  datos del profesor o confirmarlos si es que no necesitan ser actualizados"
+                                                    + "\nIntroduce el nombre del profesor");
+                                            nombre = sc.nextLine();
+                                            System.out.println("Introduce el apellido paterno del profesor");
+                                            apPa = sc.nextLine();
+                                            System.out.println("Introduce el apellido materno del profesor");
+                                            apMa = sc.nextLine();
+                                            System.out.println("Introduce el género del profesor");
+                                            sexo = sc.next().charAt(0);
+                                            System.out.println("Introduce la edad del profesor");
+                                            edad = sc.nextInt();
+                                            sc.nextLine();
+                                            System.out.println("Introduce la dirección del profesor");
+                                            dir = sc.nextLine();
+                                            System.out.println("Introduce la nacionalidad del profesor");
+                                            nacionalidad = sc.nextLine();
+                                            System.out.println("Introduce el telefono del profesor");
+                                            telefono = sc.nextLine();
+                                            System.out.println("Introduce el correo institucional del profesor");
+                                            correo = sc.nextLine();
+                                            System.out.println("Introduce la materia asignada al profesor");
+                                            String materia = sc.nextLine();
+                                            System.out.println("Introduce el sueldo del profesor");
+                                            double sueldo = sc.nextDouble();
+                                            Profesor actualizadoProf = new Profesor(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, correo, materia, sueldo);
+                                            directivo.darAltaProfesor(actualizadoProf);
+                                            System.out.println(actualizadoProf.toString());
                                             break;
                                         case 3:
-                                            break;
-                                        case 4:
                                             System.out.println("Has salido");
                                             break;
                                         default:
@@ -304,11 +326,19 @@ public class Main {
                                     decision5 = sc.nextInt();
                                     switch (decision5) {
                                         case 1:
-
+                                            System.out.println("Introduce la matricula del alumno que deseas dar de baja: ");
+                                            String matricula = sc.nextLine();
+                                            directivo.darBajaAlumno(matricula);
                                             break;
                                         case 2:
+                                            System.out.println("Introduce el nombre del profesor que deseas dar de baja");
+                                            String nombre = sc.nextLine();
+                                            directivo.darBajaProfesor(nombre);
                                             break;
                                         case 3:
+                                            System.out.println("Introduce el nombre del personal que deseas dar de baja");
+                                            nombre = sc.nextLine();
+                                            directivo.darBajaPersonal(nombre);
                                             break;
                                         case 4:
                                             System.out.println("Has salido");

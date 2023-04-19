@@ -71,11 +71,27 @@ public class Directivo extends Persona {
     public void añadirAlumnosL(Alumno alumno) {
         alumnos.add(alumno);
     }
-    
+
     public String imprimirAlumnos() {
         String output = "";
-        for ( Alumno alumno : alumnos) {
+        for (Alumno alumno : alumnos) {
             output += alumno.toString() + "\n";
+        }
+        return output;
+    }
+
+    public String imprimirProfesores() {
+        String output = "";
+        for (Profesor profesor : profesores) {
+            output += profesor.toString() + "\n";
+        }
+        return output;
+    }
+
+    public String imprimirPersonal() {
+        String output = "";
+        for (Personal personal : personalE) {
+            output += personal.toString() + "\n";
         }
         return output;
     }
@@ -118,10 +134,6 @@ public class Directivo extends Persona {
         }
     }
 
-    public List<Profesor> imprimirProfesores() {
-        return profesores;
-    }
-
     public void consultarProfesor(String nombre) {
         for (Profesor profesor : profesores) {
             if (profesor.getNombre().equals(nombre)) {
@@ -160,11 +172,8 @@ public class Directivo extends Persona {
         }
         System.out.println("No se encontró al profesor con el nombre proporcionado.");
     }
-    //PERSONAL
-    public List<Personal> imprimirPersonal() {
-        return personalE;
-    }
 
+    //PERSONAL
     public void consultarPersonal(String nombre) {
         for (Personal personal : personalE) {
             if (personal.getNombre().equals(nombre)) {
@@ -203,5 +212,5 @@ public class Directivo extends Persona {
         }
         System.out.println("No se encontró al personal con el nombre proporcionado.");
     }
-    
+
 }
