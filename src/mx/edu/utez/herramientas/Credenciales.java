@@ -11,7 +11,6 @@ public class Credenciales {
     private String[] contrasenasDir;
     private String[] usuariosProf;
     private String[] contrasenasProf;
-    private boolean credencialesValidas;
     private int posUsuario;
 
     public Credenciales() {
@@ -21,7 +20,6 @@ public class Credenciales {
         this.contrasenasDir = new String[]{"pedroortiza2", "xiomarabenitezb1"};
         this.usuariosProf = new String[]{"juanlopez", "leonardonoriega"};
         this.contrasenasProf = new String[]{"juanlopez12", "leonardonoriega2"};
-        this.credencialesValidas = false;
         this.posUsuario = -1;
     }
 
@@ -51,54 +49,57 @@ public class Credenciales {
 
     public void validarCreedencialesEstu() {
         Scanner sc = new Scanner(System.in);
+        boolean credencialesValidas = false;
         while (!credencialesValidas) {
             System.out.println("Ingrese su usuario: ");
             String usuario = sc.nextLine();
             System.out.println("Ingrese su contraseña: ");
             String contrasena = sc.nextLine();
-            for (int i = 0; i < usuariosEstu.length;) {
+            for (int i = 0; i < usuariosEstu.length; i++) {
                 if (usuario.equals(usuariosEstu[i]) && contrasena.equals(contrasenasEstu[i])) {
-                    credencialesValidas = true;
                     posUsuario = i;
                     System.out.println("Has iniciado sesión correctamente " + usuariosEstu[posUsuario]);
+                    credencialesValidas = true;
                     break;
-                } else {
-                    System.out.println("Usuario o contraseña incorrectos");
                 }
-                break;
+            }
+            if (!credencialesValidas) {
+                System.out.println("Usuario o contraseña incorrectos");
             }
         }
     }
 
     public void validarCreedencialesDir() {
         Scanner sc = new Scanner(System.in);
+        boolean credencialesValidas = false;
         while (!credencialesValidas) {
             System.out.println("Ingrese su usuario: ");
             String usuario = sc.nextLine();
             System.out.println("Ingrese su contraseña: ");
             String contrasena = sc.nextLine();
-            for (int i = 0; i < usuariosDir.length;) {
+            for (int i = 0; i < usuariosDir.length; i++) {
                 if (usuario.equals(usuariosDir[i]) && contrasena.equals(contrasenasDir[i])) {
                     credencialesValidas = true;
                     posUsuario = i;
                     System.out.println("Has iniciado sesión correctamente " + usuariosDir[posUsuario]);
                     break;
-                } else {
-                    System.out.println("Usuario o contraseña incorrectos");
                 }
-                break;
+            }
+            if (!credencialesValidas) {
+                System.out.println("Usuario o contraseña incorrectos");
             }
         }
     }
 
     public void validarCreedencialesProf() {
         Scanner sc = new Scanner(System.in);
+        boolean credencialesValidas = false;
         while (!credencialesValidas) {
             System.out.println("Ingrese su usuario: ");
             String usuario = sc.nextLine();
             System.out.println("Ingrese su contraseña: ");
             String contrasena = sc.nextLine();
-            for (int i = 0; i < usuariosProf.length;) {
+            for (int i = 0; i < usuariosProf.length; i++) {
                 if (usuario.equals(usuariosProf[i]) && contrasena.equals(contrasenasProf[i])) {
                     credencialesValidas = true;
                     posUsuario = i;
@@ -107,7 +108,9 @@ public class Credenciales {
                 } else {
                     System.out.println("Usuario o contraseña incorrectos");
                 }
-                break;
+            }
+            if (!credencialesValidas) {
+                System.out.println("Usuario o contraseña incorrectos");
             }
         }
     }

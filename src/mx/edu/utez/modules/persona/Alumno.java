@@ -42,6 +42,10 @@ public class Alumno extends Persona {
     public void setCalificaciones(String[] calificaciones) {
         this.calificaciones = calificaciones;
     }
+    
+    public String [] getCalificaciones() {
+        return calificaciones;
+    }
 
     public double getPromedio() {
         return promedio;
