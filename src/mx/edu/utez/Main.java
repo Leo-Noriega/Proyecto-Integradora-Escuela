@@ -14,7 +14,7 @@ public class Main {
 
         do {
             // Menu de para pedir credenciales
-            System.out.print("* BIENVENIDO AL SISTEMA *"
+            System.out.print("\n* BIENVENIDO AL SISTEMA *"
                     + "\nPor favor, indique si es 'estudiante', 'directivo' o 'Profesor', "
                     + "\nSi desea salir del programa en cualquier momento, escriba salir: ");
             tipoUsuario = sc.nextLine().toLowerCase();
@@ -113,34 +113,35 @@ public class Main {
                                     + "\n3.- Personal"
                                     + "\n5.- Salir");
                             int decision2 = sc.nextInt();
+                            sc.nextLine();
                             switch (decision2) {
                                 case 1:
                                     System.out.println("\nA continuación te pediremos unos datos necesarios para dar de alta al alumno"
                                             + "\nIntroduce el nombre del alumno deseado a dar de alta");
                                     String nombre = sc.nextLine();
-                                    System.out.println("\nIntroduce el apellido paterno del alumno deseado a dar de alta");
+                                    System.out.println("Introduce el apellido paterno del alumno deseado a dar de alta");
                                     String apPa = sc.nextLine();
-                                    System.out.println("\nIntroduce el apellido materno del alumno deseado a dar de alta");
+                                    System.out.println("Introduce el apellido materno del alumno deseado a dar de alta");
                                     String apMa = sc.nextLine();
-                                    System.out.println("\nIntroduce el género del alumno deseado a dar de alta");
+                                    System.out.println("Introduce el género del alumno deseado a dar de alta");
                                     char sexo = sc.next().charAt(0);
-                                    System.out.println("\nIntroduce la edad del alumno deseado a dar de alta");
+                                    System.out.println("Introduce la edad del alumno deseado a dar de alta");
                                     int edad = sc.nextInt();
-                                    System.out.println("\nIntroduce la dirección del alumno deseado a dar de alta");
+                                    sc.nextLine();
+                                    System.out.println("Introduce la dirección del alumno deseado a dar de alta");
                                     String dir = sc.nextLine();
-                                    System.out.println("\nIntroduce la nacionalidad del alumno deseado a dar de alta");
+                                    System.out.println("Introduce la nacionalidad del alumno deseado a dar de alta");
                                     String nacionalidad = sc.nextLine();
-                                    System.out.println("\nIntroduce el telefono del alumno deseado a dar de alta");
+                                    System.out.println("Introduce el telefono del alumno deseado a dar de alta");
                                     String telefono = sc.nextLine();
-                                    System.out.println("\nIntroduce la mátricula del alumno deseado a dar de alta: ");
+                                    System.out.println("Introduce la mátricula del alumno deseado a dar de alta: ");
                                     String matricula = sc.nextLine();
-                                    System.out.println("\nIntroduce el correo institucional del alumno deseado a dar de alta");
+                                    System.out.println("Introduce el correo institucional del alumno deseado a dar de alta");
                                     String correo = sc.nextLine();
-                                    System.out.println("\nIntroduce el grado del alumno deseado a dar de alta");
+                                    System.out.println("Introduce el grado del alumno deseado a dar de alta");
                                     char grado = sc.next().charAt(0);
                                     Alumno alta = new Alumno(nombre, apPa, apMa, sexo, edad, dir, nacionalidad, telefono, matricula, correo, grado);
                                     directivo.darAltaAlumno(alta);
-                                    System.out.println("Se a dado de alta correctamente al alumno");
                                     System.out.println(alta.toString());
                                     break;
                                 case 2:
