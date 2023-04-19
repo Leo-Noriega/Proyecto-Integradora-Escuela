@@ -116,13 +116,34 @@ public class Main {
                             "2468013579", "2023tn04", "anamartinez@utez.edu.mx", new String[]{"7", "8", "6"}, 'A');
                     Alumno alumno5 = new Alumno("Luis", "Hernández", "Castillo", 'M', 21, "Calle 654", "Mexicana",
                             "3692581470", "2023tn05", "luishernandez@utez.edu.mx", new String[]{"9", "7", "8"}, 'B');
-
                     //Añadiendo alumnos a ArrayList de directivo
                     directivo.añadirAlumnosL(alumno1);
                     directivo.añadirAlumnosL(alumno2);
                     directivo.añadirAlumnosL(alumno3);
                     directivo.añadirAlumnosL(alumno4);
                     directivo.añadirAlumnosL(alumno5);
+
+                    //Personal 
+                    Personal personal1 = new Personal("Ernestina", "Morales", "Madrid", 'F', 45, "Av. Roma #5",
+                            "Hondureña", "9832379487", "Limpieza", "8:00 am - 3:00 pm", 2500);
+
+                    Personal personal2 = new Personal("Jose", "Peréz", "León", 'M', 30, "Calle las palmas #15",
+                            "Salvadoreño", "2948720933", "Limpieza", "10:00 am - 5:00 pm", 3500);
+
+                    Personal personal3 = new Personal("Henry", "Victoria", "Castro", 'M', 25, "Av. Sauces #60",
+                            "Mexicano", "9623981987", "Seguridad", "8:00 am - 8:00 pm", 5000);
+
+                    Personal personal4 = new Personal("Julia", "Hernández", "Salvador", 'F', 32, "Col. Los Laureles #2",
+                            "Mexicana", "7776765687", "Seguridad", "7:00 am - 5:00 pm", 4500);
+
+                    Personal personal5 = new Personal("Selene", "Delgado", "López", 'F', 27, "Delegación Álvaro Obregon",
+                            "Mexicana", "5506894949", "Limpieza", "7:00 am - 5:00 pm", 4000);
+                    directivo.añadirPersonalL(personal1);
+                    directivo.añadirPersonalL(personal2);
+                    directivo.añadirPersonalL(personal3);
+                    directivo.añadirPersonalL(personal4);
+                    directivo.añadirPersonalL(personal5);
+
                     do {
                         System.out.println("Indica el número según la opción que deseas realizar"
                                 + "\n1.- Dar altas"

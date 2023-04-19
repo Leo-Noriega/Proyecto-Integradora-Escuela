@@ -71,6 +71,14 @@ public class Directivo extends Persona {
     public void añadirAlumnosL(Alumno alumno) {
         alumnos.add(alumno);
     }
+    
+    public void añadirProfesores(Profesor profesor) {
+        profesores.add(profesor);
+    }
+    
+    public void añadirPersonalL(Personal personal) {
+        personalE.add(personal);
+    }
 
     public String imprimirAlumnos() {
         String output = "";
@@ -87,7 +95,7 @@ public class Directivo extends Persona {
         }
         return output;
     }
-
+    
     public String imprimirPersonal() {
         String output = "";
         for (Personal personal : personalE) {
